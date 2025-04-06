@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import ContactButton from "./Contact";
+
 import ResumeButton from "./ResumeButton";
 
 const Intro = () => {
