@@ -24,7 +24,7 @@ const Intro = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-lg text-gray-400"
         >
-          Hi, I'm
+          Hi, I&apos;m
         </motion.h2>
 
         {/* Big Name */}
@@ -46,7 +46,7 @@ const Intro = () => {
         >
           Full-Stack Developer specializing in building scalable,
           high-performance applications with modern web technologies. Passionate
-          about creating seamless, user-centric digital experiences."
+          about creating seamless, user-centric digital experiences.&quot;
         </motion.p>
 
         {/* Call to Action */}
