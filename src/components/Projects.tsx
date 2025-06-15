@@ -12,7 +12,7 @@ const projects = [
       "Tailwind CSS",
       "Redux JS,MongoDB,node.js",
     ],
-    image: "/Projectimages/Shoppingwebsite.png",
+    image: "/projectimages/Shoppingwebsite.png",
     github: "https://github.com/sahilkhattal09/Shopify",
     live: "https://ecom-demo.vercel.app",
     description:
