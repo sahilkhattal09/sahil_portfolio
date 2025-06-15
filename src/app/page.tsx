@@ -1,8 +1,7 @@
 import AboutMeSection from "@/components/AboutMe";
 import ExperienceCard from "@/components/ExperienceCards";
 import HeroLayout from "@/components/HeroLayout";
-import Intro from "@/components/Intro";
-import Navbar from "@/components/Navbar";
+
 import Skills from "@/components/Skills";
 
 export default function Home() {
