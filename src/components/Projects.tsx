@@ -21,7 +21,7 @@ const projects = [
   {
     name: "Crowdfunding Platform",
     techStack: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-    image: "/Projectimages/crowdfunding.png",
+    image: "/projectimages/crowdfunding.png",
     github: "https://github.com/sahilkhattal09/Crowd_Funding_",
     live: "https://crowdfund-demo.vercel.app",
     description:
