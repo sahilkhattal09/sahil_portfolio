@@ -70,9 +70,9 @@ const AboutMeSection = () => {
             transition={{ duration: 0.8 }}
             className="text-gray-300 leading-relaxed"
           >
-            I'm a passionate Full-Stack Developer with expertise in building
-            modern, responsive websites and applications. I focus on clean code,
-            user-friendly experiences, and scalable architecture.
+            I&apos;m a passionate Full-Stack Developer with expertise in
+            building modern, responsive websites and applications. I focus on
+            clean code, user-friendly experiences, and scalable architecture.
           </motion.p>
 
           {/* Stats */}
