@@ -2,13 +2,14 @@
 import React from "react";
 
 const skills = [
-  "HTML5",
-  "CSS",
   "Javascript",
   "Node.js",
-  "React",
-  "Git",
-  "Github",
+  "React.Js",
+  "Angular.js",
+  "Tailwind CSS",
+  "Express js",
+  "Mongo DB",
+  "Sql",
 ];
 
 export default function Skills() {

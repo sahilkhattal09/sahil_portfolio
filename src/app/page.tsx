@@ -1,8 +1,10 @@
 import AboutMeSection from "@/components/AboutMe";
 import ExperienceCard from "@/components/ExperienceCards";
 import HeroLayout from "@/components/HeroLayout";
+import Projects from "@/components/Projects";
 
 import Skills from "@/components/Skills";
+import Experience from "@/pages/Experience";
 
 export default function Home() {
   return (
@@ -10,17 +12,16 @@ export default function Home() {
       <HeroLayout />
 
       <Skills />
+      <div id="about">
+        <AboutMeSection />
+      </div>
 
-      <AboutMeSection />
-      <section className="py-12 bg-cover bg-center text-gray-200 relative">
-        <div className="absolute inset-0 z-0"></div>
-        <div className="relative z-10">
-          <h2 className="text-3xl font-bold text-center mb-8">Experience</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-            <ExperienceCard />
-          </div>
-        </div>
-      </section>
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
     </div>
   );
 }
