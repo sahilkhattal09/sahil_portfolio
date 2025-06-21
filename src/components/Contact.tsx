@@ -2,8 +2,13 @@
 import { useState } from "react";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { MdContactMail } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ImSpinner2 } from "react-icons/im";
 
 export default function ContactSection() {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,18 +24,26 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
 
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    if (res.ok) {
-      alert("Message sent!");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } else {
-      alert("Failed to send.");
+      if (res.ok) {
+        toast.success("Thank you! Your message has been sent.");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast.error("Oops! Failed to send. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong.");
+      console.error("Email send error:", error);
+    } finally {
+      setIsLoading(false); // 🔁 reset loading state
     }
   };
 
@@ -120,17 +133,28 @@ export default function ContactSection() {
               onChange={handleChange}
               required
             />
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition"
+                disabled={isLoading}
+                className={`bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full transition flex items-center justify-center ${
+                  isLoading ? "opacity-70 cursor-not-allowed" : ""
+                }`}
               >
-                Send Message
+                {isLoading ? (
+                  <>
+                    <ImSpinner2 className="animate-spin mr-2 text-white text-lg" />
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </button>
             </div>
           </form>
         </div>
       </div>
+      <ToastContainer position="bottom-left" autoClose={3000} />
     </section>
   );
 }
