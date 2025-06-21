@@ -10,7 +10,7 @@ const projects = [
       "Next.js",
       "React.js",
       "Tailwind CSS",
-      "Redux JS,MongoDB,node.js",
+      "Redux JS, MongoDB, Node.js",
     ],
     image: "/projectimages/Shoppingwebsite.png",
     github: "https://github.com/sahilkhattal09/Shopify",
@@ -31,7 +31,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="text-white bg-[#0e0e2c]">
+    <section
+      id="projects"
+      className="relative z-[1] text-white bg-[#0e0e2c] overflow-hidden"
+    >
       {/* Section Heading */}
       <div className="bg-[#181d33] py-4">
         <div className="max-w-6xl mx-auto px-4">
@@ -47,10 +50,13 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col lg:flex-row items-start gap-10"
+              className="flex flex-col lg:flex-row items-start gap-10 relative overflow-hidden rounded-xl"
             >
+              {/* Orange glow effect inside each card */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-orange-500 blur-2xl opacity-20 rounded-full z-0" />
+
               {/* Project Info */}
-              <div className="flex-1 space-y-4 max-w-xl">
+              <div className="flex-1 space-y-4 max-w-xl relative z-10">
                 <h3 className="text-2xl font-semibold text-white">
                   {project.name}
                 </h3>
@@ -91,20 +97,14 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Project Image with Gradient + Glow */}
-              <div className="relative flex-1 w-full max-w-[500px] pt-4 lg:pt-0">
-                {/* Orange glow effect */}
-                <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-[70%] h-[120%] bg-orange-500 blur-3xl opacity-30 rounded-full z-0" />
-
-                {/* Soft gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#181d33] to-transparent rounded-lg z-0" />
-
+              {/* Project Image */}
+              <div className="relative flex-1 w-full max-w-[500px] pt-4 lg:pt-0 z-10">
                 <Image
                   src={project.image}
                   alt={project.name}
                   width={600}
                   height={400}
-                  className="relative z-10 object-cover w-full h-auto rounded-lg shadow-lg"
+                  className="object-cover w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
             </div>
