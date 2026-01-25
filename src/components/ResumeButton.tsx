@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const ResumeButton = ({ className = "" }) => {
   return (
     <motion.a
-      href="/MohammedSahil_resume.pdf"
+      href="/Mohammed_Sahil_Resume.pdf"
       download
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
