@@ -18,19 +18,23 @@ React, Angular, Redux, WebRTC, Express.js, Twilio, Next.js, Formik, Yup, Tailwin
   {
     company: "Insdr",
     role: "Full-Stack Developer",
-    duration: "March 2025 - Present",
+    duration: "July 2024 - Present",
     shortDescription:
-      "Developing scalable web applications with a focus on performance and security.",
-    longDescription: `At Insdr, I am working as a Full-Stack Developer with a focus on performance, scalability, and security. My key responsibilities include:
+      "Building scalable full-stack applications and automation solutions using React, Next.js, Node.js, Python, and AWS.",
+    longDescription: `At Insdr, I work as a Full-Stack Developer focused on building scalable web applications, backend services, and AI-driven solutions. My key responsibilities include:
 
-• Building RESTful APIs using Node.js and Express
+• Building and integrating RESTful APIs using Node.js and Express
 
-• Managing and optimizing MongoDB databases
+• Developing responsive and scalable front-end applications using React.js, Next.js, and TypeScript
 
-• Implementing secure authentication and authorization using JWT
+• Managing lead processing workflows including data ingestion, validation, deduplication, and routing
 
-• Contributing to front-end development using React for seamless UI/UX
+• Developing Python-based automation and web scraping pipelines using BeautifulSoup and CSS selectors
 
-• Creating an AI chatbot agent using LangGraph, FastAPI, and Python to enable intelligent conversational workflows and system integrations`,
+• Building AI-powered services and chatbot workflows using Python, FastAPI, LangGraph, and LLM APIs
+
+• Deploying backend services on AWS EC2 and integrating Amazon S3 for data storage
+
+• Implementing reusable components, performance optimizations, and secure application workflows`,
   },
 ];
